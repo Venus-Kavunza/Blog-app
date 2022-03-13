@@ -1,4 +1,3 @@
 virtualbm/
 *.pyc
-.start.sh
-instance/
+*.sh
