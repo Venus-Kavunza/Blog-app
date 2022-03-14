@@ -10,8 +10,8 @@ class Config:
     MAIL_SERVER = 'smtp.googlemail.com'
     MAIL_PORT = 587
     MAIL_USE_TLS = True
-    MAIL_USERNAME = os.environ.get("fayimani693@gmail.com")
-    MAIL_PASSWORD = os.environ.get("Venusstudy03.")
+    MAIL_USERNAME = "fayimani693@gmail.com"
+    MAIL_PASSWORD = "Venusstudy03."
     SIMPLEMDE_JS_IIFE = True
     SIMPLEMDE_USE_CDN = True
 
