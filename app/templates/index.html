@@ -9,13 +9,6 @@
     <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
 {% endblock %}
 <!-- Content block -->
-<div class="nav">
-    <ul>
-        <li>Blogmaster</li>
-        <li>Home</li>
-        li
-    </ul>
-</div>
 {% block content %}
 <div class="container-fluid">
     {% for message in get_flashed_messages() %}
@@ -24,8 +17,9 @@
         {{ message }}
 </div>
     {% endfor %}
-
-    <a class="btn btn-info btn-sm" href="{{url_for('main.new_blog')}}">ADD NEW BLOG</a>
+    <h2 style="font-size: 50px; font-family: 'Lobster', cursive;  padding-top: 40px; text-align: center; font-style: italic;">
+        Welcome to Blog-master</h2>
+        <br><br>
     <div class="row posts">
         {% for blog in blogs %}
         <article class="media">
@@ -72,11 +66,12 @@
     </article>
         {% endfor %}
     </div>
-    <div class="col-md-3">
-        <h5>Daily Quotes</h5>
+    <div class="col-md-5" style="text-align: center; left: 450px;">
+        <h5><strong>Quotes</strong></h5>
         <p>{{ quotes.quote }}</p>
-        <p>By: {{quotes.author}}</p>
+        <p style="font-style: italic;">By: {{quotes.author}}</p>
         <div class="">
+            <h5>Kindly subscribe to get the latest blogs</h5>
         {{wtf.quick_form(form ,button_map={'submit':'info btn-sm'})}}
         </div>
     </div>
