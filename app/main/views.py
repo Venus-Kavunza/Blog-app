@@ -1,7 +1,7 @@
 from flask import render_template,request,redirect,url_for,abort,flash
 from . import main
 from flask_login import login_required,current_user
-from ..models import User,Blog,Comment,Quotes,Subscribe
+from ..models import User,Blog,Comment,Quote,Subscribe
 from .forms import UpdateProfile,BlogForm,CommentForm,SubscribeForm,UpdateBlog
 from .. import db,photos
 import datetime
@@ -10,7 +10,7 @@ from app.email import mail_message
 
 @main.route('/', methods = ['POST', 'GET'])
 def index():
-    blogs = Blog.query.all()
+    #blogs = Blog.query.all()
     quotes = get_quotes()
     form = SubscribeForm()
 
@@ -24,7 +24,7 @@ def index():
 
         return redirect(url_for('main.index'))
 
-    return render_template('index.html',blogs = blogs, quotes = quotes, user = current_user, form = form)
+    return render_template('index.html', quotes = quotes, user = current_user, form = form)
 
 @main.route('/create_new', methods = ['POST','GET'])
 @login_required
