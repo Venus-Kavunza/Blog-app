@@ -3,7 +3,7 @@
 #### Author: [Venus Kavunza](https://github.com/Venus-Kavunza)
 
 
-* Link to live site: [blogmaster]()
+* Link to live site: [blogmaster](https://blogmaster-app.herokuapp.com/)
 
 ## Description
 This is a  blog website where you can create your own blog and other users can read and comment on them.It has a feature that displays random quotes to inspire users.
